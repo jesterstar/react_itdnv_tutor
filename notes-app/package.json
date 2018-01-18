@@ -1,0 +1,26 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test spicified\" && exit 1",
+    "start": "babel-node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesterstar/react_itvdn_tutor.git"
+  },
+  "author": "Sergey Glazov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesterstar/react_itvdn_tutor/issues"
+  },
+  "homepage": "https://github.com/jesterstar/react_itvdn_tutor#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel": "^5.8.38"
+  }
+}
