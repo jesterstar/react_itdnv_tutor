@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/jesterstar/react_itvdn_tutor#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mongoose": "^5.0.0"
   },
   "devDependencies": {
     "babel": "^5.8.38"
