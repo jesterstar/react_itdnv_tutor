@@ -5,21 +5,21 @@ import './../modules/Note';
 const Note = mongoose.model('Note');
 
 /**
- * Setup connetion with db
+ * Method for setup connection with db
  */
 export function setUpConnection() {
   mongoose.connect(`mongodb://localhost/notes`);
 }
 
 /**
- * Get all notes from db
+ * Method to get all notes from db
  */
 export function listNotes() {
   return Note.find();
 }
 
 /**
- * Create new note in db
+ * Method to create new note in db
  */
 export function createNote() {
   const note = new Note({
@@ -33,7 +33,7 @@ export function createNote() {
 }
 
 /**
- * Delete note from db
+ * Method to delete note from db
  * @param {string} id - note id
  */
 export function deleteNote(id) {

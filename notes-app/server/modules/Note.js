@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
 
-const Scheme = mongoose.Scheme;
+const Schema = mongoose.Schema;
 
 /**
  * Declare NoteScheme scheme
  */
-const NoteScheme = new Scheme({
+const NoteScheme = new Schema({
   title: {type: String},
   text: {type: String, required: true},
   color: {type: String},
