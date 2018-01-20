@@ -1,0 +1,53 @@
+.Note {
+  width: 250px;
+  height: auto;
+  float: left;
+  background-color: yellow;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-transition: .3s ease all;
+  -moz-transition: .3s ease all;
+  -ms-transition: .3s ease all;
+  -o-transition: .3s ease all;
+  transition: .3s ease all;
+  white-space: pre-wrap;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  opacity: .9;
+  &:hover {
+    opacity: 1;
+    -webkit-transition: .3s ease all;
+    -moz-transition: .3s ease all;
+    -ms-transition: .3s ease all;
+    -o-transition: .3s ease all;
+    transition: .3s ease all;
+    .Note__del-icon {
+      display: block;
+      -webkit-transition: .3s ease all;
+      -moz-transition: .3s ease all;
+      -ms-transition: .3s ease all;
+      -o-transition: .3s ease all;
+      transition: .3s ease all;
+    }
+  }
+  &__del-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: none;
+    color: #000;
+    cursor: pointer;
+    -webkit-transition: .3s ease all;
+    -moz-transition: .3s ease all;
+    -ms-transition: .3s ease all;
+    -o-transition: .3s ease all;
+    transition: .3s ease all;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+}

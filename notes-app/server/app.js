@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 
 import {serverPort} from './../etc/config.json';
 
@@ -18,7 +19,12 @@ const app = express();
 /**
  * Use JSON format in app
  */
-app.use(bodyParser.json());
+app.use( bodyParser.json() );
+
+/**
+ * Use cors
+ */
+app.use( cors({ origin: "*" }) );
 
 /**
  * Get all notes from db

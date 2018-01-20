@@ -36,12 +36,16 @@ const App = React.createClass({
     NotesActions.createNote(data);
   },
 
+  handleNoteDelete(note) {
+    NotesActions.deleteNote(note.id);
+  },
+
   render() {
     return (
       <div className='App'>
         <h2 className="App__header">NotesApp</h2>
         <NoteEditor onNoteAdd={this.handleNoteAdd}/>
-        <NoteGrid />
+        <NoteGrid note={this.state.notes} onNoteDelete={this.handleNoteDelete}/>
       </div>
     );
   },
