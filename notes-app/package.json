@@ -1,35 +1,36 @@
 {
-  "name": "notes-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "webpack.config.js",
+  "name": "NotesApp",
+  "version": "0.0.1",
+  "description": "Notes application",
   "scripts": {
-    "test": "echo \"Error: no test spicified\" && exit 1",
-    "webpack-devserver": "webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 8090 --host 0.0.0.0",
-    "server": "babel-node server/app.js"
+    "server": "babel-node server/app.js",
+    "webpack-devserver": "webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 8090 --host 0.0.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jesterstar/react_itvdn_tutor.git"
+  "author": {
+    "name": "Kateryna Porshnieva",
+    "email": "k.porshnieva@gmail.com",
+    "url": "https://github.com/krambertech"
   },
-  "author": "Sergey Glazov",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jesterstar/react_itvdn_tutor/issues"
-  },
-  "homepage": "https://github.com/jesterstar/react_itvdn_tutor#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "mongoose": "^5.0.0",
+    "axios": "^0.9.1",
+    "body-parser": "^1.12.3",
+    "classnames": "^2.2.3",
+    "cors": "*",
+    "events": "^1.1.0",
+    "express": "*",
+    "flux": "^2.1.1",
+    "jquery": "*",
+    "keymirror": "^0.1.1",
+    "less": "^2.6.0",
+    "mongoose": "*",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
-    "less": "^2.6.0"
+    "react-masonry-component": "^4.0.0"
   },
   "devDependencies": {
+    "autoprefixer-loader": "*",
     "babel": "5.x",
     "babel-loader": "5.*",
-    "autoprefixer-loader": "*",
     "css-loader": "^0.22.0",
     "file-loader": "^0.8.5",
     "json-loader": "^0.5.4",
