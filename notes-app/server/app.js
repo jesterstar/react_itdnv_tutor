@@ -45,7 +45,7 @@ app.post('/notes', (req, res) => {
  * @param {string} id - note id
  */
 app.delete('/notes/:id', (req, res) => {
-  db.deleteNote(req.body.id).then(data => res.send(data));
+  db.deleteNote(req.body._id).then(data => res.send(data));
 });
 
 const server = app.listen(serverPort, () => {

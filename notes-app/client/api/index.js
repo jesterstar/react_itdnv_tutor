@@ -11,7 +11,7 @@ export default {
     return axios.post(`${apiPrefix}/notes`, data);
   },
 
-  listNotes(noteId) {
+  deleteNote(noteId) {
     return axios.delete(`${apiPrefix}/notes/${noteId}`);
   }
 };

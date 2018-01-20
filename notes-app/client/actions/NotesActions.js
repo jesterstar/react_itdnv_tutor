@@ -10,11 +10,12 @@ const NoteActions = {
     });
 
     api.listNotes()
-      .then(({ data }) =>
+      .then(({ data }) => {
         AppDispatcher.dispatch({
           type: Constants.LOAD_NOTES_SUCCESS,
           notes: data
         })
+        }
       )
       .catch(err =>
         AppDispatcher.dispatch({
@@ -25,7 +26,7 @@ const NoteActions = {
   },
 
   createNote(note) {
-    api.createNote(note)
+    api.createNotes(note)
       .then(() =>
         this.loadNotes()
       )

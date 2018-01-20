@@ -23,7 +23,7 @@ export function listNotes() {
 /**
  * Method to create new note in db
  */
-export function createNote() {
+export function createNote(data) {
   const note = new Note({
     title: data.title,
     text: data.text,
