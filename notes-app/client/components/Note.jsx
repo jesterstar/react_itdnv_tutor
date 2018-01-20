@@ -8,7 +8,9 @@ const Note = React.createClass({
 
     return (
       <div className='Note' style={style}>
-        <span className='Note__del-icon' onClick={this.props.onDelete}>del</span>
+        <span className='Note__del-icon' onClick={this.props.onDelete}>
+          <i alt='remove' className='zmdi zmdi-close' />
+        </span>
         {
           this.props.title
           ?

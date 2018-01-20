@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "Notes application",
   "scripts": {
-    "start": "babel-node server/app.js",
-    "webpack-devserver": "webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 8090 --host 0.0.0.0"
+    "start:server": "babel-node server/app.js",
+    "srart:client": "webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 8090 --host 0.0.0.0"
   },
   "author": {
     "name": "Sergey Glazov",

@@ -9,7 +9,7 @@ const NoteEditor = React.createClass({
     return {
       title: '',
       text: '',
-      color: '#fff'
+      color: '#ffffff'
     };
   },
 

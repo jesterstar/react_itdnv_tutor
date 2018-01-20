@@ -25,7 +25,8 @@
     -o-transition: .3s ease all;
     transition: .3s ease all;
     .Note__del-icon {
-      display: block;
+      opacity: .7;
+      top: 5px;
       -webkit-transition: .3s ease all;
       -moz-transition: .3s ease all;
       -ms-transition: .3s ease all;
@@ -34,10 +35,11 @@
     }
   }
   &__del-icon {
+    display: block;
     position: absolute;
-    top: 5px;
+    top: -15px;
     right: 5px;
-    display: none;
+    opacity: 0;
     color: #000;
     cursor: pointer;
     -webkit-transition: .3s ease all;
@@ -45,6 +47,14 @@
     -ms-transition: .3s ease all;
     -o-transition: .3s ease all;
     transition: .3s ease all;
+    &:hover {
+      opacity: 1;
+      -webkit-transition: .3s ease all;
+      -moz-transition: .3s ease all;
+      -ms-transition: .3s ease all;
+      -o-transition: .3s ease all;
+      transition: .3s ease all;
+    }
   }
   &__title {
     margin: 0;
