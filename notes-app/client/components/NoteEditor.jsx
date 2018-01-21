@@ -9,7 +9,7 @@ const NoteEditor = React.createClass({
     return {
       title: '',
       text: '',
-      color: '#ffffff'
+      color: '#FFFFFF'
     };
   },
 
@@ -33,7 +33,7 @@ const NoteEditor = React.createClass({
     };
 
     this.props.onNoteAdd(newNote);
-    this.setState({ text: '', title: '', color: '#fff' });
+    this.setState({ text: '', title: '', color: '#FFFFFF' });
   },
 
   render() {
