@@ -4,25 +4,6 @@ import Constants from './../constants/AppConstants';
 import api from './../api';
 
 const NoteActions = {
-  testConnection() {
-    AppDispatcher.dispatch({
-      type: Constants.LOAD_CONNECTION_REQUEST
-    });
-
-    api.testConnection()
-      .then(() => {
-          AppDispatcher.dispatch({
-            type: Constants.LOAD_CONNECTION_SUCCESS
-          })
-        }
-      )
-      .catch(err =>
-        AppDispatcher.dispatch({
-          type: Constants.LOAD_CONNECTION_FAIL
-        })
-      );
-  },
-
   loadNotes() {
     AppDispatcher.dispatch({
       type: Constants.LOAD_NOTES_REQUEST

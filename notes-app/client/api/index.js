@@ -3,10 +3,6 @@ import axios from 'axios';
 import { apiPrefix } from './../../etc/config.json';
 
 export default {
-  testConnection() {
-    return axios.get(`${apiPrefix}/api`);
-  },
-
   listNotes() {
     return axios.get(`${apiPrefix}/notes`);
   },
