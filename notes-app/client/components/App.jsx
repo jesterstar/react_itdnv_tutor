@@ -1,5 +1,7 @@
 import React from 'react';
 
+// import { ToastContainer } from "react-toastr";
+
 import NotesStore from './../stores/NotesStore';
 import NotesActions from './../actions/NotesActions';
 
@@ -14,6 +16,7 @@ function getStateFromFlux() {
     notes: NotesStore.getNotes()
   };
 }
+// var container;
 
 const App = React.createClass({
   getInitialState(){
@@ -21,7 +24,11 @@ const App = React.createClass({
   },
 
   componentWillMount() {
+
     NotesActions.loadNotes();
+    // container.success(`hi! Now is ${new Date()}`, `test`, {
+    //   closeButton: true
+    // })
   },
 
   componentDidMount(){
@@ -43,6 +50,10 @@ const App = React.createClass({
   render() {
     return (
       <div className='App'>
+        {/*<ToastContainer*/}
+          {/*ref={ref => container = ref}*/}
+          {/*className="toast-top-right"*/}
+        {/*/>*/}
         <h2 className="App__header">NotesApp</h2>
         <NoteEditor onNoteAdd={this.handleNoteAdd}/>
         <NoteGrid notes={this.state.notes} onNoteDelete={this.handleNoteDelete}/>
