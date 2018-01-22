@@ -29,8 +29,8 @@ app.use( cors({ origin: "*" }) );
 /**
  * Test db connection
  */
-app.get('/api', (req, res) => {
-  db.testConnection().then(res.send('Api is running'));
+app.get('/api', () => {
+  db.testConnection();
 });
 
 /**

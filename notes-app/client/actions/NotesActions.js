@@ -10,17 +10,15 @@ const NoteActions = {
     });
 
     api.testConnection()
-      .then(({ data }) => {
+      .then(() => {
           AppDispatcher.dispatch({
-            type: Constants.LOAD_CONNECTION_SUCCESS,
-            notes: data
+            type: Constants.LOAD_CONNECTION_SUCCESS
           })
         }
       )
       .catch(err =>
         AppDispatcher.dispatch({
-          type: Constants.LOAD_CONNECTION_FAIL,
-          error: err
+          type: Constants.LOAD_CONNECTION_FAIL
         })
       );
   },

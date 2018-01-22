@@ -1,5 +1,7 @@
 import { EventEmitter } from 'events';
 
+import toastr from 'toastr';
+
 import AppDispatcher from './../dispatcher/AppDispatcher';
 import AppConstants from './../constants/AppConstants';
 
@@ -8,6 +10,10 @@ const CHANGE_EVENT = 'change';
 let _notes = [];
 let _loadingError = null;
 let _isLoading = true;
+
+// let _conectionSuccess = false;
+// let _conectionFail = false;
+// let _conectionError = false;
 
 function formatNote(note) {
   return {
@@ -67,7 +73,7 @@ AppDispatcher.register(function(action) {
     }
 
     case AppConstants.LOAD_CONNECTION_REQUEST: {
-      console.log('sending request');
+      toastr.success('Api server is running');
       break;
     }
 
@@ -77,7 +83,7 @@ AppDispatcher.register(function(action) {
     }
 
     case AppConstants.LOAD_CONNECTION_FAIL: {
-      console.log('disconnection from db');
+      toastr.error('Api server is down');
       break;
     }
 
