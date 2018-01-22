@@ -27,6 +27,13 @@ app.use( bodyParser.json() );
 app.use( cors({ origin: "*" }) );
 
 /**
+ * Test db connection
+ */
+app.get('/api', (req, res) => {
+  db.testConnection().then(res.send('Api is running'));
+});
+
+/**
  * Get all notes from db
  */
 app.get('/notes', (req, res) => {

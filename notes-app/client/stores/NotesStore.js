@@ -66,6 +66,21 @@ AppDispatcher.register(function(action) {
       break;
     }
 
+    case AppConstants.LOAD_CONNECTION_REQUEST: {
+      console.log('sending request');
+      break;
+    }
+
+    case AppConstants.LOAD_CONNECTION_SUCCESS: {
+      console.log('connection to db');
+      break;
+    }
+
+    case AppConstants.LOAD_CONNECTION_FAIL: {
+      console.log('disconnection from db');
+      break;
+    }
+
     default: {
       console.log('No such handler');
     }

@@ -13,6 +13,18 @@ export function setUpConnection() {
   mongoose.connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`);
 }
 
+export function testConnection() {
+  mongoose.connection.on('connected', () => {
+    return console.log('connect');
+  });
+  mongoose.connection.on('error', () => {
+    console.log('connection error');
+  });
+  mongoose.connection.on('disconnected', () => {
+    console.log('disconnected');
+  });
+}
+
 /**
  * Method to get all notes from db
  */
