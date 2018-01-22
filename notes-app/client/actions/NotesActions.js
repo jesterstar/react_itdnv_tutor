@@ -1,6 +1,8 @@
 import AppDispatcher from './../dispatcher/AppDispatcher';
 import Constants from './../constants/AppConstants';
 
+import toastr from 'toastr';
+
 import api from './../api';
 
 const NoteActions = {
@@ -10,11 +12,11 @@ const NoteActions = {
     });
 
     api.listNotes()
-      .then(({ data }) => {
-        AppDispatcher.dispatch({
-          type: Constants.LOAD_NOTES_SUCCESS,
-          notes: data
-        })
+      .then(({data}) => {
+          AppDispatcher.dispatch({
+            type: Constants.LOAD_NOTES_SUCCESS,
+            notes: data
+          })
         }
       )
       .catch(err =>
@@ -27,8 +29,10 @@ const NoteActions = {
 
   createNote(note) {
     api.createNotes(note)
-      .then(() =>
-        this.loadNotes()
+      .then(() => {
+          this.loadNotes();
+          toastr.success(`You add new note!`);
+        }
       )
       .catch(err =>
         console.error(err)
@@ -37,8 +41,10 @@ const NoteActions = {
 
   deleteNote(noteId) {
     api.deleteNote(noteId)
-      .then(() =>
-        this.loadNotes()
+      .then(() =>{
+          this.loadNotes();
+          toastr.warning(`Note ${noteId} has been removed.`);
+        }
       )
       .catch(err =>
         console.error(err)

@@ -22,7 +22,6 @@ const App = React.createClass({
 
   componentWillMount() {
     NotesActions.loadNotes();
-    NotesActions.testConnection();
   },
 
   componentDidMount(){
